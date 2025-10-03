@@ -1,0 +1,42 @@
+<!-- Сайт розроблено студенткою Дубограй Анастією, ФЕМП група 5-9з -->
+
+<!doctype html>
+<html lang="uk">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Тури — Мандрівка мрії</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header>
+  <div class="logo"><div class="site-title">Мандрівка мрії</div><span class="small">Туристична агенція</span></div>
+  <div>
+    <button class="lang-toggle"></button>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="tours.html">Тури</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <h1>Наші тури</h1>
+  <p>Оберіть тур та натисніть "Забронювати" — з'явиться форма для вибору дати та кількості осіб.</p>
+  <div id="tours-grid" class="tours-grid"></div>
+  <div id="booking-modal" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;padding:20px">
+    <div style="max-width:520px;background:white;padding:18px;border-radius:10px;position:relative;display:flex;flex-direction:column">
+      <button id="modal-close" style="position:absolute;right:12px;top:12px;border:none;background:#eee;padding:6px;border-radius:6px;cursor:pointer">X</button>
+      <h3 id="modal-title">Тур</h3>
+      <div class="small">Ціна за особу: <span id="modal-price"></span></div>
+      <input type="hidden" id="modal-tourid" value="">
+      <div class="form-row"><label data-i18="date">Дата</label><input id="modal-date" type="date"></div>
+      <div class="form-row"><label data-i18="guests">Кількість осіб</label><input id="modal-guests" type="number" min="1" value="1"></div>
+      <div style="margin-top:10px"><strong data-i18="total">Вартість</strong>: <span id="modal-total">0 ₴</span></div>
+      <div style="margin-top:12px">
+        <button id="modal-confirm" class="button" style="margin-right:8px" data-i18="confirm">Підтвердити бронь</button>
+        <button onclick="closeModal()" class="button" style="background:#ccc;color:#222" data-i18="close">Закрити</button>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer"><div>© <span class="author-name">Дубограй Анастасія, ФЕМП група 5-9з</span></div></footer>
+<script src="script.js"></script>
+</body></html>

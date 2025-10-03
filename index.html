@@ -1,0 +1,44 @@
+<!-- Сайт розроблено студенткою Дубограй Анастією, ФЕМП група 5-9з -->
+
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Мандрівка мрії — Головна</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="logo"><div class="site-title">Мандрівка мрії</div><span class="small">Туристична агенція</span></div>
+  <div>
+    <button class="lang-toggle"></button>
+    <nav>
+      <a href="index.html" data-i18="home_welcome">Головна</a>
+      <a href="tours.html" data-i18="home_welcome">Тури</a>
+      <a href="about.html" data-i18="home_welcome">Про нас</a>
+      <a href="contacts.html" data-i18="home_welcome">Контакти</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <section class="hero card">
+    <div class="hero-text">
+      <h1 data-i18="home_welcome">Ласкаво просимо у «Мандрівка мрії»</h1>
+      <p data-i18="home_sub">Обирай тури, мрій та подорожуй! Ми організуємо твою пригоду.</p>
+      <div style="margin-top:12px;"><a class="button" href="tours.html">Переглянути тури</a></div>
+    </div>
+    <div style="width:48%;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" style="width:100%;border-radius:8px"></div>
+  </section>
+
+  <h2 style="margin-top:18px">Популярні тури</h2>
+  <div id="tours-grid" class="tours-grid"></div>
+</main>
+
+<footer class="footer">
+  <div>© <span class="author-name">Дубограй Анастасія, ФЕМП група 5-9з</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
